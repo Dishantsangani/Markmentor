@@ -22,7 +22,7 @@ function Salary() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://markmentor-1.onrender.com/auth/techersalary", formData)
+      .post("https://markmentor.onrender.com/auth/techersalary", formData)
       .then((res) => {
         console.log("Posted Data", res.data);
         Swal.fire({
@@ -51,7 +51,7 @@ function Salary() {
 
   useEffect(() => {
     axios
-      .get("https://markmentor-1.onrender.com/auth/getalltechersalary")
+      .get("https://markmentor.onrender.com/auth/getalltechersalary")
       .then((res) => {
         const allSalaries = res.data.flatMap(
           (student) => student.techerssalary || []

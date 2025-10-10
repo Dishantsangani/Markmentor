@@ -26,7 +26,7 @@ const Exams = () => {
   const fetchExams = async () => {
     try {
       const response = await axios.get(
-        "https://markmentor-1.onrender.com/auth/getallexams"
+        "https://markmentor.onrender.com/auth/getallexams"
       );
       console.log("Fetched exams:", response.data); // Debug
       setExams(response.data);
@@ -47,7 +47,10 @@ const Exams = () => {
     e.preventDefault();
 
     try {
-      await axios.post("https://markmentor-1.onrender.com/auth/addexam", formData);
+      await axios.post(
+        "https://markmentor.onrender.com/auth/addexam",
+        formData
+      );
       toggleModal();
       setFormData({
         examName: "",

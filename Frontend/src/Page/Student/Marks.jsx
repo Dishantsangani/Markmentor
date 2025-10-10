@@ -88,7 +88,7 @@ function Marks() {
 
     try {
       // Step 3: Send to backend
-      await axios.post("https://markmentor-1.onrender.com/auth/entermarks", {
+      await axios.post("https://markmentor.onrender.com/auth/entermarks", {
         marks: newMarks.map(({ studentId, Subject, score }) => ({
           studentId,
           subject: Subject,
@@ -118,7 +118,7 @@ function Marks() {
   // Featching Data
   useEffect(() => {
     axios
-      .get("https://markmentor-1.onrender.com/auth/students")
+      .get("https://markmentor.onrender.com/auth/students")
       .then((res) => {
         setformadata(res.data);
       })

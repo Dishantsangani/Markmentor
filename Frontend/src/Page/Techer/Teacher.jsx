@@ -30,7 +30,7 @@ function Teacher() {
     e.preventDefault();
     toggleModal();
     axios
-      .post("https://markmentor-1.onrender.com/auth/addtecher", formdata)
+      .post("https://markmentor.onrender.com/auth/addtecher", formdata)
       .then((res) => {
         console.log("responsed data", res.data);
         Swal.fire({
@@ -51,7 +51,7 @@ function Teacher() {
 
   useEffect(() => {
     axios
-      .get("https://markmentor-1.onrender.com/auth/getalltecher")
+      .get("https://markmentor.onrender.com/auth/getalltecher")
       .then((res) => {
         console.log("API Response:", res.data);
         const allTechers = res.data.flatMap((item) => item.techer);

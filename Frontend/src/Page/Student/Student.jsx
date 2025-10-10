@@ -147,7 +147,7 @@ function Student() {
       };
 
       axios
-        .post("https://markmentor-1.onrender.com/auth/students", added)
+        .post("https://markmentor.onrender.com/auth/students", added)
         .then((response) => {
           setFormdata((prev) => [...prev, response.data.student]);
           setRefresh((prev) => !prev); // toggles the refresh value, triggering useEffect
@@ -182,7 +182,7 @@ function Student() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:8080/auth/students/${id}`)
+          .delete(`https://markmentor.onrender.com/auth/students/${id}`)
           .then(() => {
             setFormdata((prev) => prev.filter((item) => item._id !== id));
             Swal.fire("Deleted!", "Student has been deleted.", "success");
@@ -197,7 +197,7 @@ function Student() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://markmentor-1.onrender.com/auth/students")
+      .get("https://markmentor.onrender.com/auth/students")
       .then((res) => {
         setFormdata(res.data);
         setLoading(false);

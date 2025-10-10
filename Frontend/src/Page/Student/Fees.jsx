@@ -19,7 +19,7 @@ function Fees() {
   const handlesubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://markmentor-1.onrender.com/auth/addbilling", formdata)
+      .post("https://markmentor.onrender.com/auth/addbilling", formdata)
       .then((res) => {
         console.log(res.data);
         Swal.fire({
@@ -34,7 +34,7 @@ function Fees() {
 
   useEffect(() => {
     axios
-      .get("https://markmentor-1.onrender.com/auth/getallbilling")
+      .get("https://markmentor.onrender.com/auth/getallbilling")
       .then((res) => {
         console.log("Response data", res.data);
         const allBilling = res.data.flatMap((item) => item.billing);

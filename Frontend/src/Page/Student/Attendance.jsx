@@ -14,7 +14,7 @@ function Attendance() {
   useEffect(() => {
     if (selectedStd && selectedSubject) {
       axios
-        .get("https://markmentor-1.onrender.com/auth/students", {
+        .get("https://markmentor.onrender.com/auth/students", {
           params: {
             standard: selectedStd,
             subject: selectedSubject,
@@ -81,7 +81,7 @@ function Attendance() {
     try {
       const promises = students.map((student) => {
         const status = attendanceMap[student.rollno] || "Absent";
-        return axios.post("https://markmentor-1.onrender.com/auth/enterattendance", {
+        return axios.post("https://markmentor.onrender.com/auth/enterattendance", {
           rollno: student.rollno,
           subject: selectedSubject,
           date: selectedDate,

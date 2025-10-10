@@ -8,7 +8,7 @@ function Report() {
 
   useEffect(() => {
     axios
-      .get("https://markmentor-1.onrender.com/auth/entermarks")
+      .get("https://markmentor.onrender.com/auth/entermarks")
       .then((res) => {
         setformdata(res.data);
         console.log("res.data: ", res.data);

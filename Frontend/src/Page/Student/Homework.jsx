@@ -14,7 +14,7 @@ function Homework() {
   const fetchHomework = async () => {
     try {
       const response = await axios.get(
-        "https://markmentor-1.onrender.com/auth/allhomework"
+        "https://markmentor.onrender.com/auth/allhomework"
       );
       setApidata(response.data);
     } catch (error) {
@@ -55,7 +55,7 @@ function Homework() {
     };
 
     try {
-      await axios.post("https://markmentor-1.onrender.com/auth/addhomework", newHomework);
+      await axios.post("https://markmentor.onrender.com/auth/addhomework", newHomework);
       setQuestion(""); // Clear input
 
       // Refresh homework list by calling fetchHomework

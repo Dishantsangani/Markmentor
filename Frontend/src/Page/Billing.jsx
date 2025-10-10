@@ -11,7 +11,7 @@ function Billing() {
     setLoadingButton(clicked);
 
     try {
-      const response = await axios.post("https://markmentor-1.onrender.com/auth/billing");
+      const response = await axios.post("https://markmentor.onrender.com/auth/billing");
       if (response && response.status === 200) {
         window.location.href = response.data.url;
       }
