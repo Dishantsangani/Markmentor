@@ -12,7 +12,7 @@ Connection();
 
 // Middleware
 App.use(cors());
-App.use(express.json()); // ✅ Fixed typo (APP → App)
+App.use(express.json());
 
 // API Routes
 App.use("/auth", studentRouter);
